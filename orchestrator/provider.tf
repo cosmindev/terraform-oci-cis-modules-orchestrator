@@ -3,12 +3,23 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Thu Nov 16 2023                                                                          #
+# Last Modified: Mon Dec 11 2023                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
 provider "oci" {
-  region               = var.home_region
+  alias                = "region_1"
+  region               = var.region
+  tenancy_ocid         = var.tenancy_ocid
+  user_ocid            = var.user_ocid
+  fingerprint          = var.fingerprint
+  private_key_path     = var.private_key_path
+  private_key_password = var.private_key_password
+}
+
+provider "oci" {
+  alias                = "region_2"
+  region               = "eu-frankfurt-1"
   tenancy_ocid         = var.tenancy_ocid
   user_ocid            = var.user_ocid
   fingerprint          = var.fingerprint

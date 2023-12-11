@@ -3,11 +3,11 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Tue Nov 21 2023                                                                          #
+# Last Modified: Mon Dec 11 2023                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
-locals {
+/*locals {
   network_configuration = var.network_configuration != null ? length(var.network_configuration) > 0 ? {
     default_compartment_id     = var.network_configuration.default_compartment_id != null ? var.network_configuration.default_compartment_id : var.network_configuration.default_compartment_key != null ? local.compartments[var.network_configuration.default_compartment_key].id : null
     default_defined_tags       = var.network_configuration.default_defined_tags
@@ -512,9 +512,23 @@ locals {
       }
     } : null : null
   } : null : null
+}*/
+
+module "us-ashburn-1-terraform-oci-cis-landing-zone-network" {
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  compartments_dependency = module.cislz_compartments.compartments
+  network_configuration   = var.network_configuration.us-ashburn-1
+  providers = {
+    oci = oci.region_1
+  }
 }
 
-module "terraform-oci-cis-landing-zone-network" {
-  source                = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.3"
-  network_configuration = local.network_configuration
+module "eu-frankfurt-1-terraform-oci-cis-landing-zone-network" {
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  compartments_dependency = module.cislz_compartments.compartments
+  network_configuration   = var.network_configuration.eu-frankfurt-1
+  network_dependency = module.us-ashburn-1-terraform-oci-cis-landing-zone-network.provisioned_networking_resources.remote_peering_connections
+  providers = {
+    oci = oci.region_2
+  }
 }
