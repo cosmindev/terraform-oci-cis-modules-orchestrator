@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Mon Dec 11 2023                                                                          #
+# Last Modified: Tue Dec 12 2023                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
@@ -29,11 +29,6 @@ variable "private_key_password" {
   default = null
 }
 variable "home_region" {
-  type    = string
-  default = null
-}
-
-variable "region" {
   type    = string
   default = null
 }
@@ -215,6 +210,7 @@ variable "policies_configuration" {
 
 variable "network_configuration" {
   type = map(object({
+    depends_on_regions         = optional(list(string)),
     default_compartment_id     = optional(string),
     default_defined_tags       = optional(map(string)),
     default_freeform_tags      = optional(map(string)),

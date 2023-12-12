@@ -3,10 +3,18 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Mon Dec 11 2023                                                                          #
+# Last Modified: Tue Dec 12 2023                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
+
+locals {
+  dependency_acceptor_networking_modules_output = var.network_configuration != null ? { 
+  for k, v in var.network_configuration : k => module.terraform-oci-cis-landing-zone-network-dependency-acceptor[k] if v.depends_on_regions == null || coalescelist(v.depends_on_regions,["empty"])[0] == "empty" } : {} 
+
+  dependency_requestor_networking_modules_output = var.network_configuration != null ? { 
+  for k, v in var.network_configuration : k => module.terraform-oci-cis-landing-zone-network-dependency-requestor[k] if coalescelist(v.depends_on_regions,["empty"])[0] != "empty"  } : {} 
+}
 
 output "provisioned_identity_resources" {
   description = "Provisioned identity resources"
@@ -23,7 +31,13 @@ output "provisioned_identity_resources" {
 output "provisioned_networking_resources" {
   description = "Provisioned networking resources"
   value = merge(
-    module.us-ashburn-1-terraform-oci-cis-landing-zone-network.provisioned_networking_resources,
-    module.eu-frankfurt-1-terraform-oci-cis-landing-zone-network.provisioned_networking_resources
+    local.dependency_acceptor_networking_modules_output,
+    local.dependency_requestor_networking_modules_output
   )
+
 }
+
+/*
+output "eu-frankfurt-1-network-dependencies" {
+  value = local.eu-frankfurt-1-network-dependencies
+}*/
