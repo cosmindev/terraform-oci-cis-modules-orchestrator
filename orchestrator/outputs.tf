@@ -134,7 +134,7 @@ output "provisioned_networking_resources" {
         {
           "network-dependencies-requestor" = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "us-sanjose-1") ? coalescelist(var.network_configuration.us-sanjose-1.depends_on_regions, ["empty"])[0] != "empty" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.provisioned_networking_resources : null : null : null : null
         }
-      )/*,
+      ) /*,
       "ap-sydney-1" = merge(
         {
           "network-dependencies-acceptor" = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-sydney-1") ? coalescelist(var.network_configuration.ap-sydney-1.depends_on_regions, ["empty"])[0] == "empty" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.provisioned_networking_resources : null : null : null : null
