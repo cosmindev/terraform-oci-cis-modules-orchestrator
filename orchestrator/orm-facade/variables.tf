@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Thu Nov 16 2023                                                                          #
+# Last Modified: Thu Dec 14 2023                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
@@ -27,7 +27,7 @@ variable "private_key_password" {
   type    = string
   default = null
 }
-variable "home_region" {
+variable "region" {
   type    = string
   default = null
 }

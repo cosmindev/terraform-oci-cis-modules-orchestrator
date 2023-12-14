@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Wed Dec 13 2023                                                                          #
+# Last Modified: Thu Dec 14 2023                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
@@ -25,6 +25,7 @@ module "cislz_groups" {
   tenancy_ocid         = var.tenancy_ocid
   module_name          = var.groups_configuration != null ? var.groups_configuration.module_name != null ? var.groups_configuration.module_name : "iam-groups" : "iam-groups"
   groups_configuration = var.groups_configuration
+  depends_on = [module.cislz_compartments]
   providers = {
     oci = oci.home-region
   }
@@ -35,6 +36,7 @@ module "cislz_dynamic_groups" {
   tenancy_ocid                 = var.tenancy_ocid
   module_name                  = var.dynamic_groups_configuration != null ? var.dynamic_groups_configuration.module_name != null ? var.dynamic_groups_configuration.module_name : "iam-dynamic-groups" : "iam-dynamic-groups"
   dynamic_groups_configuration = var.dynamic_groups_configuration
+  depends_on = [module.cislz_compartments]
   providers = {
     oci = oci.home-region
   }
@@ -47,6 +49,7 @@ module "cislz_policies" {
   module_name            = var.policies_configuration != null ? var.policies_configuration.module_name != null ? var.policies_configuration.module_name : "iam-policies" : "iam-policies"
   enable_output          = var.policies_configuration != null ? var.policies_configuration.enable_output != null ? var.policies_configuration.enable_output : false : false
   enable_debug           = var.policies_configuration != null ? var.policies_configuration.enable_debug != null ? var.policies_configuration.enable_debug : false : false
+  depends_on = [module.cislz_compartments, module.cislz_groups, module.cislz_dynamic_groups]
   providers = {
     oci = oci.home-region
   }
