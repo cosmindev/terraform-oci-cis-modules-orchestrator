@@ -33,7 +33,7 @@ variable "home_region" {
   default = null
 }
 
-variable "parent_compartment_ocid" {
+variable "parent_compartment" {
   type    = map(object({
     id = string
   }))
