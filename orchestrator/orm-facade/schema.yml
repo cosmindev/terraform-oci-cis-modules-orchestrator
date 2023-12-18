@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Thu Nov 16 2023                                                                          #
+# Last Modified: Mon Dec 18 2023                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
@@ -33,7 +33,14 @@ variableGroups:
       - "private_key_password"
       - "region"
       - "home_region"
+      - "parent_compartment_ocid"
 variables:
+  parent_compartment_ocid:
+    type: oci:identity:compartment:id
+    title: "Parent compartment OCID"
+    description: "The compartment that will be used as a parent for all the configured children compartments"
+    required: false 
+    visible: true
   input_config_files_urls:
     type: array
     items:

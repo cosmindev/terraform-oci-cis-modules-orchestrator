@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Thu Dec 14 2023                                                                          #
+# Last Modified: Mon Dec 18 2023                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
@@ -13,6 +13,11 @@ module "terraform-oci-open-lz" {
   tenancy_ocid = var.tenancy_ocid
   home_region  = var.region
   user_ocid    = var.user_ocid
+  parent_compartment_ocid = {
+    "PARENT-COMPARTMENT-KEY" = {
+      id = var.parent_compartment_ocid
+    }
+  }
 
   compartments_configuration   = local.compartments_configuration_from_input_json_yaml_file
   groups_configuration         = local.groups_configuration_from_input_json_yaml_file
