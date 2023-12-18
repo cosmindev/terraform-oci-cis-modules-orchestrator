@@ -34,9 +34,9 @@ variable "home_region" {
 }
 
 variable "parent_compartment_ocid" {
-  type    = object({
+  type    = map(object({
     id = string
-  })
+  }))
   default = null
 }
 
