@@ -19,6 +19,10 @@ locale: "en"
 logoUrl: "https://objectstorage.us-ashburn-1.oraclecloud.com/p/taf6kC9fSJyQDNSYbxvqxS_JsdnSu56oFZ3-1h5vI7-WfJUv77mplChopLxZPePW/n/ociateam/b/cis-landing-zone/o/landing_zone_130.png"
 
 variableGroups:
+  - title: "CONFIGURATION PARENT COMPARTMENT"
+    visible: true
+    variables:
+      - parent_compartment_ocid
   - title: "INPUT JSON AND/OR YAML CONFIGURATION FILES URLS"
     visible: true
     variables:
@@ -36,7 +40,7 @@ variableGroups:
 variables:
   parent_compartment_ocid:
     type: oci:identity:compartment:id
-    title: "Parent compartment OCID"
+    title: Parent compartment OCID
     description: "The compartment that will be used as a parent for all the configured children compartments"
     required: false 
     visible: true
@@ -49,7 +53,7 @@ variables:
     title: Type or Paste the URLs
     additionalProps:
         allowMultiple: true
-    description: "Only JSON files accepted - HCL not supported yet"
+    description: "Only JSON and YAML files accepted - HCL TFVARS files not supported yet"
     required: false
 
 outputs:
