@@ -33,7 +33,6 @@ variableGroups:
       - "private_key_password"
       - "region"
       - "home_region"
-      - "parent_compartment_ocid"
 variables:
   parent_compartment_ocid:
     type: oci:identity:compartment:id
