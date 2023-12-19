@@ -28,7 +28,7 @@ terraform {
         oci.uk-cardiff-1,
         oci.us-phoenix-1,
         oci.us-sanjose-1,
-        oci.ap-sydney-1,
+        oci.ap-sydney-1 /*,
         oci.ap-melbourne-1,
         oci.sa-saopaulo-1,
         oci.sa-vinhedo-1,
@@ -45,7 +45,7 @@ terraform {
         oci.eu-jovanovac-1,
         oci.ap-singapore-1,
         oci.af-johannesburg-1,
-        oci.ap-seoul-1
+        oci.ap-seoul-1*/
       ]
     }
   }
@@ -212,7 +212,7 @@ provider "oci" {
   private_key_path     = var.private_key_path
   private_key_password = var.private_key_password
 }
-
+/*
 provider "oci" {
   alias                = "ap-melbourne-1"
   region               = "ap-melbourne-1"
@@ -382,4 +382,5 @@ provider "oci" {
   private_key_path     = var.private_key_path
   private_key_password = var.private_key_password
 }
+*/
 

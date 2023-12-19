@@ -160,6 +160,7 @@ module "ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" 
   }
 }
 
+/*
 // sa-bogota-1 network terraform module Dependency acceptor
 module "sa-bogota-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
   source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
@@ -269,7 +270,7 @@ module "ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-accepto
     oci = oci.ap-singapore-1
   }
 }
-
+/*
 // af-johannesburg-1 network terraform module Dependency acceptor
 module "af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
   source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
@@ -329,7 +330,7 @@ module "sa-santiago-1-terraform-oci-cis-landing-zone-network-dependency-acceptor
     oci = oci.sa-santiago-1
   }
 }
-
+*/
 // us-ashburn-1 network terraform module Dependency Requestor
 module "us-ashburn-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
   source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
@@ -354,7 +355,7 @@ module "us-ashburn-1-terraform-oci-cis-landing-zone-network-dependency-requestor
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -371,7 +372,7 @@ module "us-ashburn-1-terraform-oci-cis-landing-zone-network-dependency-requestor
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -407,7 +408,7 @@ module "ca-montreal-1-terraform-oci-cis-landing-zone-network-dependency-requesto
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -424,7 +425,7 @@ module "ca-montreal-1-terraform-oci-cis-landing-zone-network-dependency-requesto
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -460,7 +461,7 @@ module "ca-toronto-1-terraform-oci-cis-landing-zone-network-dependency-requestor
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -477,7 +478,7 @@ module "ca-toronto-1-terraform-oci-cis-landing-zone-network-dependency-requestor
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -515,7 +516,7 @@ module "eu-frankfurt-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -532,7 +533,7 @@ module "eu-frankfurt-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -568,7 +569,7 @@ module "ap-hyderabad-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -585,7 +586,7 @@ module "ap-hyderabad-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -621,7 +622,7 @@ module "ap-mumbai-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -638,7 +639,7 @@ module "ap-mumbai-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -674,7 +675,7 @@ module "ap-tokyo-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -691,7 +692,7 @@ module "ap-tokyo-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -728,7 +729,7 @@ module "eu-amsterdam-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -745,7 +746,7 @@ module "eu-amsterdam-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -782,7 +783,7 @@ module "me-abudhabi-1-terraform-oci-cis-landing-zone-network-dependency-requesto
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -799,7 +800,7 @@ module "me-abudhabi-1-terraform-oci-cis-landing-zone-network-dependency-requesto
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -836,7 +837,7 @@ module "me-dubai-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -853,7 +854,7 @@ module "me-dubai-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -890,7 +891,7 @@ module "uk-london-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -907,7 +908,7 @@ module "uk-london-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -944,7 +945,7 @@ module "uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-requestor
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -961,7 +962,7 @@ module "uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-requestor
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -997,7 +998,7 @@ module "us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-requestor
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1014,7 +1015,7 @@ module "us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-requestor
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -1051,7 +1052,7 @@ module "us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-requestor
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1068,7 +1069,7 @@ module "us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-requestor
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -1105,7 +1106,7 @@ module "ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {} /*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1122,7 +1123,7 @@ module "ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
           value == "eu-jovanovac-1" ? module.eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "ap-singapore-1" ? module.ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "af-johannesburg-1" ? module.af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}
+          value == "ap-seoul-1" ? module.ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}*/
           ) : {
           key = k
           id  = v.id
@@ -1136,7 +1137,7 @@ module "ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
 }
 
 
-
+/*
 // ap-melbourne-1 network terraform module Dependency Requestor
 module "ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
   source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
@@ -1160,7 +1161,7 @@ module "ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1213,7 +1214,7 @@ module "sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-requesto
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1266,7 +1267,7 @@ module "sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-requestor
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1319,7 +1320,7 @@ module "sa-santiago-1-terraform-oci-cis-landing-zone-network-dependency-requesto
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1372,7 +1373,7 @@ module "sa-bogota-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1425,7 +1426,7 @@ module "eu-paris-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1478,7 +1479,7 @@ module "eu-marseille-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1531,7 +1532,7 @@ module "il-jerusalem-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1584,7 +1585,7 @@ module "eu-milan-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1637,7 +1638,7 @@ module "mx-queretaro-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1691,7 +1692,7 @@ module "mx-monterrey-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1744,7 +1745,7 @@ module "me-jeddah-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1797,7 +1798,7 @@ module "eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1850,7 +1851,7 @@ module "ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-request
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1903,7 +1904,7 @@ module "af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-requ
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -1956,7 +1957,7 @@ module "ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -2009,7 +2010,7 @@ module "ap-osaka-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
           value == "uk-cardiff-1" ? module.uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-phoenix-1" ? module.us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "us-sanjose-1" ? module.us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
-          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
+          value == "ap-sydney-1" ? module.ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {}/*,
           value == "ap-melbourne-1" ? module.ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-saopaulo-1" ? module.sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
           value == "sa-vinhedo-1" ? module.sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor.flat_map_of_provisioned_networking_resources : {},
@@ -2038,6 +2039,7 @@ module "ap-osaka-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
     oci = oci.ap-osaka-1
   }
 }
+*/
 
 
 
