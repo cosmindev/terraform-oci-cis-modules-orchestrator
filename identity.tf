@@ -15,7 +15,7 @@ module "cislz_compartments" {
   derive_keys_from_hierarchy = false
   module_name                = "iam-compartments"
   tags_dependency            = null
-  compartments_dependency = var.parent_compartment
+  compartments_dependency    = var.parent_compartment
   providers = {
     oci = oci.home-region
   }
@@ -26,7 +26,7 @@ module "cislz_groups" {
   tenancy_ocid         = var.tenancy_ocid
   module_name          = "iam-groups"
   groups_configuration = var.groups_configuration
-  depends_on = [module.cislz_compartments]
+  depends_on           = [module.cislz_compartments]
   providers = {
     oci = oci.home-region
   }
@@ -37,7 +37,7 @@ module "cislz_dynamic_groups" {
   tenancy_ocid                 = var.tenancy_ocid
   module_name                  = "iam-dynamic-groups"
   dynamic_groups_configuration = var.dynamic_groups_configuration
-  depends_on = [module.cislz_compartments]
+  depends_on                   = [module.cislz_compartments]
   providers = {
     oci = oci.home-region
   }
@@ -50,7 +50,7 @@ module "cislz_policies" {
   module_name            = "iam-policies"
   enable_output          = false
   enable_debug           = false
-  depends_on = [module.cislz_compartments, module.cislz_groups, module.cislz_dynamic_groups]
+  depends_on             = [module.cislz_compartments, module.cislz_groups, module.cislz_dynamic_groups]
   providers = {
     oci = oci.home-region
   }
