@@ -1,6 +1,6 @@
 # The OCI CIS Terraform Modules Orchestrator
 
-
+![Landing Zone logo](./images/landing_zone_300.png)
 
 ## **Table of Contents**
 
@@ -139,6 +139,12 @@ experiments = [module_variable_optional_attrs]
 &nbsp; 
 
 ## **3. How to Invoke the Module**
+
+### **3.2 ORM** 
+
+[![Deploy_To_OCI](./images/DeployToOCI.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking/archive/refs/heads/main.zip)
+
+### **3.2 CLI**
 
 Terraform modules can be invoked locally or remotely. 
 
