@@ -3,13 +3,13 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Mon Dec 18 2023                                                                          #
+# Last Modified: Tue Dec 19 2023                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
 
-title: "OCI OPEN LANDING ZONE ORM STACK"
-stackDescription: "Creates and changes elements of the OCI Open Landing Zone."
+title: "OCI CIS Terraform Modules Orchestrator - Provisions any OCI topology"
+stackDescription: "Provisions any OCI IAM and Networking topology"
 description: ""
 schemaVersion: 1.1.0
 version: "0.0.1"
@@ -59,7 +59,7 @@ variables:
 outputs:
   release:
     type: string
-    title: OCI Open Landing Zone
+    title: Provisioned OCI Topology
 
   region:
     type: string
