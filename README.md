@@ -142,7 +142,7 @@ experiments = [module_variable_optional_attrs]
 
 ### **3.2 ORM** 
 
-[![Deploy_To_OCI](./images/DeployToOCI.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/cosmindev/terraform-oci-cis-modules-orchestrator/archive/refs/heads/master.zip)
+[![Deploy_To_OCI](./images/DeployToOCI.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/cosmindev/terraform-oci-cis-modules-orchestrator/archive/refs/heads/main.zip)
 
 ### **3.2 CLI**
 
