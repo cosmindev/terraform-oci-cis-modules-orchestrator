@@ -3,16 +3,10 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Mon Dec 18 2023                                                                          #
+# Last Modified: Tue Dec 19 2023                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
-output "a_parent_compartment" {
-  value = {
-    "PARENT-COMPARTMENT-KEY" = {
-      id = var.parent_compartment_ocid
-    }
-  }
-}
+
 output "provisioned_identity_resources" {
   description = "Provisioned identity resources"
   value       = module.terraform-oci-open-lz.provisioned_identity_resources
