@@ -14,7 +14,7 @@ module "terraform-oci-open-lz" {
   home_region  = var.region
   user_ocid    = var.user_ocid
   parent_compartment = {
-    "PARENT-COMPARTMENT-KEY" = {
+    "PARENT-COMPARTMENT-FROM-ORM-KEY" = {
       id = var.parent_compartment_ocid
     }
   }

@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Mon Dec 18 2023                                                                          #
+# Last Modified: Tue Dec 19 2023                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
@@ -44,7 +44,7 @@ module "cislz_dynamic_groups" {
 }
 
 module "cislz_policies" {
-  source                 = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-iam.git//policies?ref=v0.1.5"
+  source                 = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-iam.git//policies?ref=v0.1.8"
   tenancy_ocid           = var.tenancy_ocid
   policies_configuration = var.policies_configuration
   module_name            = "iam-policies"
