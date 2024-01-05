@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Thu Nov 16 2023                                                                          #
+# Last Modified: Fri Jan 05 2024                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
@@ -66,5 +66,5 @@ locals {
   dynamic_groups_configuration_from_input_json_yaml_file = local.merged_input_config_files != null ? contains(keys(local.merged_input_config_files), "dynamic_groups_configuration") ? local.merged_input_config_files.dynamic_groups_configuration : null : null
   policies_configuration_from_input_json_yaml_file       = local.merged_input_config_files != null ? contains(keys(local.merged_input_config_files), "policies_configuration") ? local.merged_input_config_files.policies_configuration : null : null
   network_configuration_from_input_json_yaml_file        = local.merged_input_config_files != null ? contains(keys(local.merged_input_config_files), "network_configuration") ? local.merged_input_config_files.network_configuration : null : null
-
+  vaults_configuration_from_input_json_yaml_file         = local.merged_input_config_files != null ? contains(keys(local.merged_input_config_files), "vaults_configuration") ? local.merged_input_config_files.vaults_configuration : null : null
 }
