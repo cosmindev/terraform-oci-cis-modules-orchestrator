@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Tue Dec 19 2023                                                                          #
+# Last Modified: Fri Jan 05 2024                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
@@ -319,6 +319,22 @@ output "provisioned_networking_resources" {
           "network-dependencies-requestor" = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "sa-bogota-1") ? coalescelist(var.network_configuration.sa-bogota-1.depends_on_regions, ["empty"])[0] != "empty" ? module.sa-bogota-1-terraform-oci-cis-landing-zone-network-dependency-requestor.provisioned_networking_resources : null : null : null : null
         }
       )*/
+    }
+  )
+}
+
+output "provisioned_security_resources" {
+  description = "Provisioned security resources"
+  value = merge(
+    {
+      us-ashburn-1 = {
+        vaults = {
+          vaults        = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? module.us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults.vaults : null : null
+          keys          = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? module.us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults.keys : null : null
+          keys_versions = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? module.us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults.keys_versions : null : null
+          policies      = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? module.us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults.policies : null : null
+        }
+      }
     }
   )
 }

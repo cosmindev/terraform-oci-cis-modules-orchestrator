@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Tue Dec 19 2023                                                                          #
+# Last Modified: Fri Jan 05 2024                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
@@ -11,7 +11,7 @@
 
 // us-ashburn-1 network terraform module Dependency acceptor
 module "us-ashburn-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "us-ashburn-1") ? coalescelist(var.network_configuration.us-ashburn-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["us-ashburn-1"] : null : null : null
   providers = {
@@ -21,7 +21,7 @@ module "us-ashburn-1-terraform-oci-cis-landing-zone-network-dependency-acceptor"
 
 // ca-montreal-1 network terraform module Dependency acceptor
 module "ca-montreal-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "ca-montreal-1") ? coalescelist(var.network_configuration.ca-montreal-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["ca-montreal-1"] : null : null : null
   providers = {
@@ -31,7 +31,7 @@ module "ca-montreal-1-terraform-oci-cis-landing-zone-network-dependency-acceptor
 
 // ca-toronto-1 network terraform module Dependency acceptor
 module "ca-toronto-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "ca-toronto-1") ? coalescelist(var.network_configuration.ca-toronto-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["ca-toronto-1"] : null : null : null
   providers = {
@@ -41,7 +41,7 @@ module "ca-toronto-1-terraform-oci-cis-landing-zone-network-dependency-acceptor"
 
 // eu-frankfurt-1 network terraform module Dependency acceptor
 module "eu-frankfurt-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "eu-frankfurt-1") ? coalescelist(var.network_configuration.eu-frankfurt-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["eu-frankfurt-1"] : null : null : null
   providers = {
@@ -51,7 +51,7 @@ module "eu-frankfurt-1-terraform-oci-cis-landing-zone-network-dependency-accepto
 
 // ap-hyderabad-1 network terraform module Dependency acceptor
 module "ap-hyderabad-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "ap-hyderabad-1") ? coalescelist(var.network_configuration.ap-hyderabad-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["ap-hyderabad-1"] : null : null : null
   providers = {
@@ -61,7 +61,7 @@ module "ap-hyderabad-1-terraform-oci-cis-landing-zone-network-dependency-accepto
 
 // ap-mumbai-1 network terraform module Dependency acceptor
 module "ap-mumbai-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "ap-mumbai-1") ? coalescelist(var.network_configuration.ap-mumbai-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["ap-mumbai-1"] : null : null : null
   providers = {
@@ -71,7 +71,7 @@ module "ap-mumbai-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" 
 
 // ap-tokyo-1 network terraform module Dependency acceptor
 module "ap-tokyo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "ap-tokyo-1") ? coalescelist(var.network_configuration.ap-tokyo-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["ap-tokyo-1"] : null : null : null
   providers = {
@@ -81,7 +81,7 @@ module "ap-tokyo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
 
 // eu-amsterdam-1 network terraform module Dependency acceptor
 module "eu-amsterdam-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "eu-amsterdam-1") ? coalescelist(var.network_configuration.eu-amsterdam-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["eu-amsterdam-1"] : null : null : null
   providers = {
@@ -91,7 +91,7 @@ module "eu-amsterdam-1-terraform-oci-cis-landing-zone-network-dependency-accepto
 
 // me-abudhabi-1 network terraform module Dependency acceptor
 module "me-abudhabi-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "me-abudhabi-1") ? coalescelist(var.network_configuration.me-abudhabi-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["me-abudhabi-1"] : null : null : null
   providers = {
@@ -101,7 +101,7 @@ module "me-abudhabi-1-terraform-oci-cis-landing-zone-network-dependency-acceptor
 
 // me-dubai-1 network terraform module Dependency acceptor
 module "me-dubai-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "me-dubai-1") ? coalescelist(var.network_configuration.me-dubai-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["me-dubai-1"] : null : null : null
   providers = {
@@ -111,7 +111,7 @@ module "me-dubai-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
 
 // uk-london-1 network terraform module Dependency acceptor
 module "uk-london-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "uk-london-1") ? coalescelist(var.network_configuration.uk-london-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["uk-london-1"] : null : null : null
   providers = {
@@ -121,7 +121,7 @@ module "uk-london-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" 
 
 // uk-cardiff-1 network terraform module Dependency acceptor
 module "uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "uk-cardiff-1") ? coalescelist(var.network_configuration.uk-cardiff-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["uk-cardiff-1"] : null : null : null
   providers = {
@@ -131,7 +131,7 @@ module "uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-acceptor"
 
 // us-phoenix-1 network terraform module Dependency acceptor
 module "us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "us-phoenix-1") ? coalescelist(var.network_configuration.us-phoenix-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["us-phoenix-1"] : null : null : null
   providers = {
@@ -141,7 +141,7 @@ module "us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-acceptor"
 
 // us-sanjose-1 network terraform module Dependency acceptor
 module "us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "us-sanjose-1") ? coalescelist(var.network_configuration.us-sanjose-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["us-sanjose-1"] : null : null : null
   providers = {
@@ -152,7 +152,7 @@ module "us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-acceptor"
 
 // ap-sydney-1 network terraform module Dependency acceptor
 module "ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "ap-sydney-1") ? coalescelist(var.network_configuration.ap-sydney-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["ap-sydney-1"] : null : null : null
   providers = {
@@ -163,7 +163,7 @@ module "ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" 
 /*
 // sa-bogota-1 network terraform module Dependency acceptor
 module "sa-bogota-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "sa-bogota-1") ? coalescelist(var.network_configuration.sa-bogota-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["sa-bogota-1"] : null : null : null
   providers = {
@@ -173,7 +173,7 @@ module "sa-bogota-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" 
 
 // eu-paris-1 network terraform module Dependency acceptor
 module "eu-paris-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "eu-paris-1") ? coalescelist(var.network_configuration.eu-paris-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["eu-paris-1"] : null : null : null
   providers = {
@@ -183,7 +183,7 @@ module "eu-paris-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
 
 // eu-marseille-1 network terraform module Dependency acceptor
 module "eu-marseille-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "eu-marseille-1") ? coalescelist(var.network_configuration.eu-marseille-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["eu-marseille-1"] : null : null : null
   providers = {
@@ -193,7 +193,7 @@ module "eu-marseille-1-terraform-oci-cis-landing-zone-network-dependency-accepto
 
 // il-jerusalem-1 network terraform module Dependency acceptor
 module "il-jerusalem-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "il-jerusalem-1") ? coalescelist(var.network_configuration.il-jerusalem-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["il-jerusalem-1"] : null : null : null
   providers = {
@@ -203,7 +203,7 @@ module "il-jerusalem-1-terraform-oci-cis-landing-zone-network-dependency-accepto
 
 // eu-milan-1 network terraform module Dependency acceptor
 module "eu-milan-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "eu-milan-1") ? coalescelist(var.network_configuration.eu-milan-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["eu-milan-1"] : null : null : null
   providers = {
@@ -213,7 +213,7 @@ module "eu-milan-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
 
 // ap-osaka-1 network terraform module Dependency acceptor
 module "ap-osaka-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "ap-osaka-1") ? coalescelist(var.network_configuration.ap-osaka-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["ap-osaka-1"] : null : null : null
   providers = {
@@ -223,7 +223,7 @@ module "ap-osaka-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
 
 // mx-queretaro-1 network terraform module Dependency acceptor
 module "mx-queretaro-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "mx-queretaro-1") ? coalescelist(var.network_configuration.mx-queretaro-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["mx-queretaro-1"] : null : null : null
   providers = {
@@ -233,7 +233,7 @@ module "mx-queretaro-1-terraform-oci-cis-landing-zone-network-dependency-accepto
 
 // mx-monterrey-1 network terraform module Dependency acceptor
 module "mx-monterrey-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "mx-monterrey-1") ? coalescelist(var.network_configuration.mx-monterrey-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["mx-monterrey-1"] : null : null : null
   providers = {
@@ -243,7 +243,7 @@ module "mx-monterrey-1-terraform-oci-cis-landing-zone-network-dependency-accepto
 
 // me-jeddah-1 network terraform module Dependency acceptor
 module "me-jeddah-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "me-jeddah-1") ? coalescelist(var.network_configuration.me-jeddah-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["me-jeddah-1"] : null : null : null
   providers = {
@@ -253,7 +253,7 @@ module "me-jeddah-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" 
 
 // eu-jovanovac-1 network terraform module Dependency acceptor
 module "eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "eu-jovanovac-1") ? coalescelist(var.network_configuration.eu-jovanovac-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["eu-jovanovac-1"] : null : null : null
   providers = {
@@ -263,7 +263,7 @@ module "eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-accepto
 
 // ap-singapore-1 network terraform module Dependency acceptor
 module "ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "ap-singapore-1") ? coalescelist(var.network_configuration.ap-singapore-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["ap-singapore-1"] : null : null : null
   providers = {
@@ -273,7 +273,7 @@ module "ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-accepto
 /*
 // af-johannesburg-1 network terraform module Dependency acceptor
 module "af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "af-johannesburg-1") ? coalescelist(var.network_configuration.af-johannesburg-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["af-johannesburg-1"] : null : null : null
   providers = {
@@ -283,7 +283,7 @@ module "af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-acce
 
 // ap-seoul-1 network terraform module Dependency acceptor
 module "ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "ap-seoul-1") ? coalescelist(var.network_configuration.ap-seoul-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["ap-seoul-1"] : null : null : null
   providers = {
@@ -293,7 +293,7 @@ module "ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
 
 // ap-melbourne-1 network terraform module Dependency acceptor
 module "ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "ap-melbourne-1") ? coalescelist(var.network_configuration.ap-melbourne-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["ap-melbourne-1"] : null : null : null
   providers = {
@@ -303,7 +303,7 @@ module "ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-accepto
 
 // sa-saopaulo-1 network terraform module Dependency acceptor
 module "sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "sa-saopaulo-1") ? coalescelist(var.network_configuration.sa-saopaulo-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["sa-saopaulo-1"] : null : null : null
   providers = {
@@ -313,7 +313,7 @@ module "sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor
 
 // sa-vinhedo-1 network terraform module Dependency acceptor
 module "sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "sa-vinhedo-1") ? coalescelist(var.network_configuration.sa-vinhedo-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["sa-vinhedo-1"] : null : null : null
   providers = {
@@ -323,7 +323,7 @@ module "sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-acceptor"
 
 // sa-santiago-1 network terraform module Dependency acceptor
 module "sa-santiago-1-terraform-oci-cis-landing-zone-network-dependency-acceptor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? contains(keys(var.network_configuration), "sa-santiago-1") ? coalescelist(var.network_configuration.sa-santiago-1.depends_on_regions, ["empty"])[0] == "empty" ? var.network_configuration["sa-santiago-1"] : null : null : null
   providers = {
@@ -333,7 +333,7 @@ module "sa-santiago-1-terraform-oci-cis-landing-zone-network-dependency-acceptor
 */
 // us-ashburn-1 network terraform module Dependency Requestor
 module "us-ashburn-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "us-ashburn-1") ? coalescelist(var.network_configuration.us-ashburn-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.us-ashburn-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "us-ashburn-1") ? {
@@ -387,7 +387,7 @@ module "us-ashburn-1-terraform-oci-cis-landing-zone-network-dependency-requestor
 
 // ca-montreal-1 network terraform module Dependency Requestor
 module "ca-montreal-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ca-montreal-1") ? coalescelist(var.network_configuration.ca-montreal-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.ca-montreal-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ca-montreal-1") ? {
@@ -440,7 +440,7 @@ module "ca-montreal-1-terraform-oci-cis-landing-zone-network-dependency-requesto
 
 // ca-toronto-1 network terraform module Dependency Requestor
 module "ca-toronto-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ca-toronto-1") ? coalescelist(var.network_configuration.ca-toronto-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.ca-toronto-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ca-toronto-1") ? {
@@ -494,7 +494,7 @@ module "ca-toronto-1-terraform-oci-cis-landing-zone-network-dependency-requestor
 
 // eu-frankfurt-1 network terraform module Dependency Requestor
 module "eu-frankfurt-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "eu-frankfurt-1") ? coalescelist(var.network_configuration.eu-frankfurt-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.eu-frankfurt-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "eu-frankfurt-1") ? {
@@ -548,7 +548,7 @@ module "eu-frankfurt-1-terraform-oci-cis-landing-zone-network-dependency-request
 
 // ap-hyderabad-1 network terraform module Dependency Requestor
 module "ap-hyderabad-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-hyderabad-1") ? coalescelist(var.network_configuration.ap-hyderabad-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.ap-hyderabad-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-hyderabad-1") ? {
@@ -601,7 +601,7 @@ module "ap-hyderabad-1-terraform-oci-cis-landing-zone-network-dependency-request
 
 // ap-mumbai-1 network terraform module Dependency Requestor
 module "ap-mumbai-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-mumbai-1") ? coalescelist(var.network_configuration.ap-mumbai-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.ap-mumbai-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-mumbai-1") ? {
@@ -654,7 +654,7 @@ module "ap-mumbai-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
 
 // ap-tokyo-1 network terraform module Dependency Requestor
 module "ap-tokyo-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-tokyo-1") ? coalescelist(var.network_configuration.ap-tokyo-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.ap-tokyo-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-tokyo-1") ? {
@@ -707,7 +707,7 @@ module "ap-tokyo-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
 
 // eu-amsterdam-1 network terraform module Dependency Requestor
 module "eu-amsterdam-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "eu-amsterdam-1") ? coalescelist(var.network_configuration.eu-amsterdam-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.eu-amsterdam-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "eu-amsterdam-1") ? {
@@ -761,7 +761,7 @@ module "eu-amsterdam-1-terraform-oci-cis-landing-zone-network-dependency-request
 
 // me-abudhabi-1 network terraform module Dependency Requestor
 module "me-abudhabi-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "me-abudhabi-1") ? coalescelist(var.network_configuration.me-abudhabi-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.me-abudhabi-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "me-abudhabi-1") ? {
@@ -815,7 +815,7 @@ module "me-abudhabi-1-terraform-oci-cis-landing-zone-network-dependency-requesto
 
 // me-dubai-1 network terraform module Dependency Requestor
 module "me-dubai-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "me-dubai-1") ? coalescelist(var.network_configuration.me-dubai-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.me-dubai-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "me-dubai-1") ? {
@@ -869,7 +869,7 @@ module "me-dubai-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
 
 // uk-london-1 network terraform module Dependency Requestor
 module "uk-london-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "uk-london-1") ? coalescelist(var.network_configuration.uk-london-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.uk-london-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "uk-london-1") ? {
@@ -923,7 +923,7 @@ module "uk-london-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
 
 // uk-cardiff-1 network terraform module Dependency Requestor
 module "uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "uk-cardiff-1") ? coalescelist(var.network_configuration.uk-cardiff-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.uk-cardiff-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "uk-cardiff-1") ? {
@@ -977,7 +977,7 @@ module "uk-cardiff-1-terraform-oci-cis-landing-zone-network-dependency-requestor
 
 // us-phoenix-1 network terraform module Dependency Requestor
 module "us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "us-phoenix-1") ? coalescelist(var.network_configuration.us-phoenix-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.us-phoenix-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "us-phoenix-1") ? {
@@ -1030,7 +1030,7 @@ module "us-phoenix-1-terraform-oci-cis-landing-zone-network-dependency-requestor
 
 // us-sanjose-1 network terraform module Dependency Requestor
 module "us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "us-sanjose-1") ? coalescelist(var.network_configuration.us-sanjose-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.us-sanjose-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "us-sanjose-1") ? {
@@ -1085,7 +1085,7 @@ module "us-sanjose-1-terraform-oci-cis-landing-zone-network-dependency-requestor
 
 // ap-sydney-1 network terraform module Dependency Requestor
 module "ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-sydney-1") ? coalescelist(var.network_configuration.ap-sydney-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.ap-sydney-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-sydney-1") ? {
@@ -1140,7 +1140,7 @@ module "ap-sydney-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
 /*
 // ap-melbourne-1 network terraform module Dependency Requestor
 module "ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-melbourne-1") ? coalescelist(var.network_configuration.ap-melbourne-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.ap-melbourne-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-melbourne-1") ? {
@@ -1193,7 +1193,7 @@ module "ap-melbourne-1-terraform-oci-cis-landing-zone-network-dependency-request
 
 // sa-saopaulo-1 network terraform module Dependency Requestor
 module "sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "sa-saopaulo-1") ? coalescelist(var.network_configuration.sa-saopaulo-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.sa-saopaulo-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "sa-saopaulo-1") ? {
@@ -1246,7 +1246,7 @@ module "sa-saopaulo-1-terraform-oci-cis-landing-zone-network-dependency-requesto
 
 // sa-vinhedo-1 network terraform module Dependency Requestor
 module "sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "sa-vinhedo-1") ? coalescelist(var.network_configuration.sa-vinhedo-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.sa-vinhedo-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "sa-vinhedo-1") ? {
@@ -1299,7 +1299,7 @@ module "sa-vinhedo-1-terraform-oci-cis-landing-zone-network-dependency-requestor
 
 // sa-santiago-1 network terraform module Dependency Requestor
 module "sa-santiago-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "sa-santiago-1") ? coalescelist(var.network_configuration.sa-santiago-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.sa-santiago-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "sa-santiago-1") ? {
@@ -1352,7 +1352,7 @@ module "sa-santiago-1-terraform-oci-cis-landing-zone-network-dependency-requesto
 
 // sa-bogota-1 network terraform module Dependency Requestor
 module "sa-bogota-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "sa-bogota-1") ? coalescelist(var.network_configuration.sa-bogota-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.sa-bogota-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "sa-bogota-1") ? {
@@ -1405,7 +1405,7 @@ module "sa-bogota-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
 
 // eu-paris-1 network terraform module Dependency Requestor
 module "eu-paris-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "eu-paris-1") ? coalescelist(var.network_configuration.eu-paris-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.eu-paris-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "eu-paris-1") ? {
@@ -1458,7 +1458,7 @@ module "eu-paris-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
 
 // eu-marseille-1 network terraform module Dependency Requestor
 module "eu-marseille-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "eu-marseille-1") ? coalescelist(var.network_configuration.eu-marseille-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.eu-marseille-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "eu-marseille-1") ? {
@@ -1511,7 +1511,7 @@ module "eu-marseille-1-terraform-oci-cis-landing-zone-network-dependency-request
 
 // il-jerusalem-1 network terraform module Dependency Requestor
 module "il-jerusalem-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "il-jerusalem-1") ? coalescelist(var.network_configuration.il-jerusalem-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.il-jerusalem-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "il-jerusalem-1") ? {
@@ -1564,7 +1564,7 @@ module "il-jerusalem-1-terraform-oci-cis-landing-zone-network-dependency-request
 
 // eu-milan-1 network terraform module Dependency Requestor
 module "eu-milan-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "eu-milan-1") ? coalescelist(var.network_configuration.eu-milan-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.eu-milan-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "eu-milan-1") ? {
@@ -1617,7 +1617,7 @@ module "eu-milan-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
 
 // mx-queretaro-1 network terraform module Dependency Requestor
 module "mx-queretaro-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "mx-queretaro-1") ? coalescelist(var.network_configuration.mx-queretaro-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.mx-queretaro-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "mx-queretaro-1") ? {
@@ -1671,7 +1671,7 @@ module "mx-queretaro-1-terraform-oci-cis-landing-zone-network-dependency-request
 
 // mx-monterrey-1 network terraform module Dependency Requestor
 module "mx-monterrey-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "mx-monterrey-1") ? coalescelist(var.network_configuration.mx-monterrey-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.mx-monterrey-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "mx-monterrey-1") ? {
@@ -1724,7 +1724,7 @@ module "mx-monterrey-1-terraform-oci-cis-landing-zone-network-dependency-request
 
 // me-jeddah-1 network terraform module Dependency Requestor
 module "me-jeddah-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "me-jeddah-1") ? coalescelist(var.network_configuration.me-jeddah-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.me-jeddah-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "me-jeddah-1") ? {
@@ -1777,7 +1777,7 @@ module "me-jeddah-1-terraform-oci-cis-landing-zone-network-dependency-requestor"
 
 // eu-jovanovac-1 network terraform module Dependency Requestor
 module "eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "eu-jovanovac-1") ? coalescelist(var.network_configuration.eu-jovanovac-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.eu-jovanovac-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "eu-jovanovac-1") ? {
@@ -1830,7 +1830,7 @@ module "eu-jovanovac-1-terraform-oci-cis-landing-zone-network-dependency-request
 
 // ap-singapore-1 network terraform module Dependency Requestor
 module "ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-singapore-1") ? coalescelist(var.network_configuration.ap-singapore-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.ap-singapore-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-singapore-1") ? {
@@ -1883,7 +1883,7 @@ module "ap-singapore-1-terraform-oci-cis-landing-zone-network-dependency-request
 
 // af-johannesburg-1 network terraform module Dependency Requestor
 module "af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "af-johannesburg-1") ? coalescelist(var.network_configuration.af-johannesburg-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.af-johannesburg-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "af-johannesburg-1") ? {
@@ -1936,7 +1936,7 @@ module "af-johannesburg-1-terraform-oci-cis-landing-zone-network-dependency-requ
 
 // ap-seoul-1 network terraform module Dependency Requestor
 module "ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-seoul-1") ? coalescelist(var.network_configuration.ap-seoul-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.ap-seoul-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-seoul-1") ? {
@@ -1989,7 +1989,7 @@ module "ap-seoul-1-terraform-oci-cis-landing-zone-network-dependency-requestor" 
 
 // ap-osaka-1 network terraform module Dependency Requestor
 module "ap-osaka-1-terraform-oci-cis-landing-zone-network-dependency-requestor" {
-  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git"
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-networking.git?ref=v0.6.4"
   compartments_dependency = module.cislz_compartments.compartments
   network_configuration   = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-osaka-1") ? coalescelist(var.network_configuration.ap-osaka-1.depends_on_regions, ["empty"])[0] != "empty" ? var.network_configuration.ap-seoul-1 : null : null : null : null
   network_dependency = var.network_configuration != null ? var.network_configuration != null ? contains(keys(var.network_configuration), "ap-osaka-1") ? {

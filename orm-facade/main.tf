@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Wed Dec 20 2023                                                                          #
+# Last Modified: Fri Jan 05 2024                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
@@ -24,4 +24,5 @@ module "terraform-oci-cis-modules-orchestrator" {
   dynamic_groups_configuration = local.dynamic_groups_configuration_from_input_json_yaml_file
   policies_configuration       = local.policies_configuration_from_input_json_yaml_file
   network_configuration        = local.network_configuration_from_input_json_yaml_file
+  vaults_configuration         = local.vaults_configuration_from_input_json_yaml_file
 }

@@ -1,5 +1,5 @@
 # ####################################################################################################### #
-# Copyright (c) 2023 Oracle and/or its affiliates,  All rights reserved.                                  #
+# Copyright (c) 2024 Oracle and/or its affiliates,  All rights reserved.                                  #
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
@@ -7,18 +7,14 @@
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
-output "provisioned_identity_resources" {
-  description = "Provisioned identity resources"
-  value       = module.terraform-oci-cis-modules-orchestrator.provisioned_identity_resources
-}
+module "us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults" {
+  source = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-security.git//vaults?ref=v0.1.1"
 
-output "provisioned_networking_resources" {
-  description = "Provisioned networking resources"
-  value       = module.terraform-oci-cis-modules-orchestrator.provisioned_networking_resources
-}
+  vaults_configuration    = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? var.vaults_configuration.us-ashburn-1 : null : null
+  compartments_dependency = module.cislz_compartments.compartments
 
-output "provisioned_security_resources" {
-  description = "Provisioned_security_resources"
-  value       = module.terraform-oci-cis-modules-orchestrator.provisioned_security_resources
+  providers = {
+    oci      = oci.us-ashburn-1
+    oci.home = oci.home-region
+  }
 }
-
