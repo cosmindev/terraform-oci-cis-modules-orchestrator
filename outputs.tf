@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Fri Jan 05 2024                                                                          #
+# Last Modified: Wed Jan 10 2024                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
@@ -329,10 +329,18 @@ output "provisioned_security_resources" {
     {
       us-ashburn-1 = {
         vaults = {
-          vaults        = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? module.us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults.vaults : null : null
-          keys          = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? module.us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults.keys : null : null
-          keys_versions = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? module.us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults.keys_versions : null : null
-          policies      = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? module.us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults.policies : null : null
+          vaults        = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? module.us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults[0].vaults : null : null
+          keys          = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? module.us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults[0].keys : null : null
+          keys_versions = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? module.us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults[0].keys_versions : null : null
+          policies      = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "us-ashburn-1") ? module.us-ashburn-1-terraform-oci-cis-landing-zone-security-vaults[0].policies : null : null
+        }
+      },
+      eu-frankfurt-1 = {
+        vaults = {
+          vaults        = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "eu-frankfurt-1") ? module.eu-frankfurt-1-terraform-oci-cis-landing-zone-security-vaults[0].vaults : null : null
+          keys          = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "eu-frankfurt-1") ? module.eu-frankfurt-1-terraform-oci-cis-landing-zone-security-vaults[0].keys : null : null
+          keys_versions = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "eu-frankfurt-1") ? module.eu-frankfurt-1-terraform-oci-cis-landing-zone-security-vaults[0].keys_versions : null : null
+          policies      = var.vaults_configuration != null ? contains(keys(var.vaults_configuration), "eu-frankfurt-1") ? module.eu-frankfurt-1-terraform-oci-cis-landing-zone-security-vaults[0].policies : null : null
         }
       }
     }
