@@ -3,7 +3,7 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at https: //oss.oracle.com/licenses/upl. #
 # Author: Cosmin Tudor                                                                                    #
 # Author email: cosmin.tudor@oracle.com                                                                   #
-# Last Modified: Fri Jan 05 2024                                                                          #
+# Last Modified: Wed Jan 10 2024                                                                          #
 # Modified by: Cosmin Tudor, email: cosmin.tudor@oracle.com                                               #
 # ####################################################################################################### #
 
@@ -155,54 +155,50 @@ variable "dynamic_groups_configuration" {
 }
 
 
-# Policies Input Variable. Complex object.
 variable "policies_configuration" {
   description = "Policies configuration"
   type = object({
-    enable_output               = optional(bool)   # Whether Terraform should enable module output.
-    enable_debug                = optional(bool)   # Whether Terraform should enable module debug information.
-    module_name                 = optional(string) # The module name.
-    enable_cis_benchmark_checks = optional(bool)   # Whether to check policies for CIS Foundations Benchmark recommendations. Default is true.
-    supplied_policies = optional(map(object({      # A map of directly supplied policies. Use this to suplement or override the template policies.
+    enable_cis_benchmark_checks = optional(bool) # Whether to check policies for CIS Foundations Benchmark recommendations. Default is true.
+    supplied_policies = optional(map(object({ # A map of directly supplied policies. Use this to suplement or override the template policies.
       name             = string
       description      = string
-      compartment_ocid = string
+      compartment_id   = string
       statements       = list(string)
       defined_tags     = optional(map(string))
       freeform_tags    = optional(map(string))
     })))
-    template_policies = optional(object({                        # An object describing the template policies. In this mode, policies are derived according to tenancy_level_settings and compartment_level_settings.
-      tenancy_level_settings = optional(object({                 # Settings for tenancy level (Root compartment) policies generation.
+    template_policies = optional(object({ # An object describing the template policies. In this mode, policies are derived according to tenancy_level_settings and compartment_level_settings.
+      tenancy_level_settings = optional(object({ # Settings for tenancy level (Root compartment) policies generation.
         groups_with_tenancy_level_roles = optional(list(object({ # A list of group names and their roles at the tenancy level. Template policies are granted to each group in the Root compartment.
-          name  = string
+          name = string
           roles = string
         })))
         oci_services = optional(object({
-          enable_all_policies            = optional(bool)
-          enable_scanning_policies       = optional(bool)
-          enable_cloud_guard_policies    = optional(bool)
-          enable_os_management_policies  = optional(bool)
-          enable_block_storage_policies  = optional(bool)
-          enable_file_storage_policies   = optional(bool)
-          enable_oke_policies            = optional(bool)
-          enable_streaming_policies      = optional(bool)
+          enable_all_policies = optional(bool)
+          enable_scanning_policies = optional(bool)
+          enable_cloud_guard_policies = optional(bool)
+          enable_os_management_policies = optional(bool)
+          enable_block_storage_policies = optional(bool)
+          enable_file_storage_policies = optional(bool)
+          enable_oke_policies = optional(bool)
+          enable_streaming_policies = optional(bool)
           enable_object_storage_policies = optional(bool)
         }))
         policy_name_prefix = optional(string) # A prefix to Root compartment policy names.
       }))
-      compartment_level_settings = optional(object({  # Settings for compartment (non Root) level policies generation.
+      compartment_level_settings = optional(object({ # Settings for compartment (non Root) level policies generation.
         supplied_compartments = optional(map(object({ # List of compartments that are policy targets.
-          name           = string                     # The compartment name
-          ocid           = string                     # The compartment ocid
-          cislz_metadata = map(string)                # The compartment metadata. See module README.md for details.
+          name = string # The compartment name
+          id   = string # The compartment id
+          cislz_metadata = map(string) # The compartment metadata. See module README.md for details.
         })))
         #policy_name_prefix = optional(string) # A prefix to compartment policy names.
       }))
     }))
-    policy_name_prefix = optional(string)      # A prefix to all policy names.
-    policy_name_suffix = optional(string)      # A suffix to all policy names.
-    defined_tags       = optional(map(string)) # Any defined tags to apply on the template (pre-configured) policies.
-    freeform_tags      = optional(map(string)) # Any freeform tags to apply on the template (pre-configured) policies.
+    policy_name_prefix = optional(string) # A prefix to all policy names.
+    policy_name_suffix = optional(string) # A suffix to all policy names.
+    defined_tags = optional(map(string)) # Any defined tags to apply on the template (pre-configured) policies.
+    freeform_tags = optional(map(string)) # Any freeform tags to apply on the template (pre-configured) policies.
   })
   default = null
 }
