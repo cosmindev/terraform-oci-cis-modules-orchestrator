@@ -44,14 +44,14 @@ module "cislz_dynamic_groups" {
 }
 
 module "cislz_policies" {
-  source                 = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-iam.git//policies?ref=v0.1.9"
-  tenancy_ocid           = var.tenancy_ocid
+  source                  = "git::https://github.com/oracle-quickstart/terraform-oci-cis-landing-zone-iam.git//policies?ref=v0.1.9"
+  tenancy_ocid            = var.tenancy_ocid
   compartments_dependency = module.cislz_compartments.compartments
-  policies_configuration = var.policies_configuration
-  module_name            = "iam-policies"
-  enable_output          = false
-  enable_debug           = false
-  depends_on             = [module.cislz_compartments, module.cislz_groups, module.cislz_dynamic_groups]
+  policies_configuration  = var.policies_configuration
+  module_name             = "iam-policies"
+  enable_output           = false
+  enable_debug            = false
+  depends_on              = [module.cislz_compartments, module.cislz_groups, module.cislz_dynamic_groups]
   providers = {
     oci = oci.home-region
   }
